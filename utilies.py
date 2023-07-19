@@ -2,7 +2,7 @@ import requests
 import json
 import os
 
-infoblox = os.environ.get("INFOBLOX_GRIDMASTER", default='10.0.0.241')
+infoblox = os.environ.get("INFOBLOX_GRIDMASTER", default='1.2.4.1')
 username = os.environ.get("INFOBLOX_USERNAME", default='admin'),
 password = os.environ.get("INFOBLOX_PASSWORD", default='infoblox')
 

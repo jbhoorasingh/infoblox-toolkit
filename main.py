@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from enum import Enum
 from utilies import create_next_avail_network_container
+import os
 
 app = FastAPI(description="Simple middleware to add logic for some Infoblox function")
 
@@ -50,7 +51,7 @@ class ResponseModel(BaseModel):
 
 @app.get("/")
 async def root():
-    return {"message": "Got to /docs to see api documentation"}
+    return {"message": "Got to /docs to see api documentation", 'infoblox_gm': os.getenv('INFOBLOX_GRIDMASTER')}
 
 
 

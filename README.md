@@ -2,10 +2,12 @@
 ### TO BE UPDATED
 More info to be added
 
-# Quickstart
+# Quickstart: Development
 ```bash
+mv .env.sample .env
+vi .env # Update .env with correct values
 pip install -r requirements.txt
-uvicorn main:app --reload
+uvicorn main:app --reload --env-file .env
 ```
 
 # Might be Interesting
